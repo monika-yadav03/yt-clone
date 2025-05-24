@@ -1,8 +1,8 @@
 import ListItem from "./ListItem";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-const List = ({video, setSelectedVideo}) => {
-  // console.log(video);
+const List = ({ video, setSelectedVideo }) => {
+  console.log(video);
 
   return (
     <Container className="mb-3" onClick={() => setSelectedVideo(video)}>
@@ -15,8 +15,8 @@ const List = ({video, setSelectedVideo}) => {
           />
         </Col>
         <Col sm={3}>
-          <h1>title</h1>
-          <p>description</p>
+          <h1>{video?.snippet?.channelTitle}</h1>
+          <p>{video?.snippet?.description}</p>
         </Col>
       </Row>
     </Container>
